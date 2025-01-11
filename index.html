@@ -3,33 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio - OnezeroAgency</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
+            background: #1e1e2f;
+            color: #dcdde1;
         }
+
         header {
-            background: #007BFF;
-            color: white;
-            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #0f3460;
+            color: #fff;
         }
-        section {
-            margin: 20px 0;
+
+        header nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
         }
+
+        /* A4 Page Style */
+        .page {
+            
+            margin: 1rem auto;
+            background: #162447;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            color: #f8f8f2;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #00a8cc;
+        }
+
+        .hero .socials a {
+            margin: 0 0.5rem;
+            color: #00a8cc;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #0f3460;
+            border-radius: 8px;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #00a8cc;
+            display: inline-block;
+        }
+
+        .skills, .experience, .education {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #1a1a2e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            padding: 1.5rem;
+            color: #dcdde1;
+            width: 250px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #00a8cc;
+            color: #fff;
+        }
+
         footer {
-            margin-top: 30px;
-            font-size: 14px;
+            text-align: center;
+            padding: 1rem;
+            background: #0f3460;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+        </nav>
     </header>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></
+
+    <div class="page">
+        <section class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm [Your Name], a passionate developer working at <strong>OnezeroAgency</strong>.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a professional developer specializing in web development, UI/UX design, and SEO optimization. With a strong passion for technology, I aim to deliver innovative and user-centric solutions.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Adobe XD</p>
+                </div>
+                <div class="card">
+                    <h3>SEO Optimization</h3>
+                    <p>Google Analytics, SEMrush</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div class="card">
+                    <h3>OnezeroAgency</h3>
+                    <p>Role: Web Developer</p>
+                    <p>Duration: 2021 - Present</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <div class="card">
+                    <h3>Master's in Computer Science</h3>
+                    <p>University of XYZ, 2020</p>
+                </div>
+                <div class="card">
+                    <h3>Bachelor's in Information Technology</h3>
+                    <p>College of ABC, 2018</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Brief description of the project.</p>
+            </div>
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Brief description of the project.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 [Your Name]. All rights reserved.
+    </footer>
+</body>
+</html>
