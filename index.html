@@ -1,198 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raj Dhoundyal</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            width: 210mm;
-            min-height: 297mm;
-            margin: 0 auto;
-            font-family: 'Arial', sans-serif;
-            background: #1e1e2f;
-            color: #dcdde1;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Press Start 2P', cursive;
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #0f3460;
-            color: #fff;
-        }
+    }
 
-        header nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-        }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
 
-        /* A4 Page Style */
-        .page {
-            
-            margin: 1rem auto;
-            background: #162447;
-            padding: 2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-        .hero {
-            text-align: center;
-            color: #f8f8f2;
-            margin-bottom: 2rem;
-        }
+    header h1 {
+      font-size: 2.5rem;
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            color: #00a8cc;
-        }
+    .section {
+      margin-bottom: 60px;
+    }
 
-        .hero .socials a {
-            margin: 0 0.5rem;
-            color: #00a8cc;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
 
-        .section {
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: #0f3460;
-            border-radius: 8px;
-            color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
+    .skill {
+      background: #1a1a1a;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #00a8cc;
-            display: inline-block;
-        }
+    .skill:hover {
+      transform: scale(1.1);
+    }
 
-        .skills, .experience, .education {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
 
-        .card {
-            background: #1a1a2e;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            text-align: center;
-            padding: 1.5rem;
-            color: #dcdde1;
-            width: 250px;
-            transition: transform 0.3s, background 0.3s;
-        }
+    .project-card {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 5px;
+      transform: perspective(1000px) rotateY(-15deg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-            background: #00a8cc;
-            color: #fff;
-        }
+    .project-card:hover {
+      transform: perspective(1000px) rotateY(0deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
 
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #0f3460;
-            color: #fff;
-        }
-    </style>
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .experience-item {
+      background: #1a1a1a;
+      padding: 15px;
+      border-left: 4px solid #00bcd4;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .experience-item:hover {
+      transform: translateX(10px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .skills {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
     <header>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-        </nav>
+      <h1>Welcome to My Portfolio</h1>
     </header>
 
-    <div class="page">
-        <section class="hero">
-            <h1>Elevating Digital Experiences</h1>
-            <p>Hi, I'm Rajj, a web developer at OneZero Agency. I specialize in crafting intuitive websites, impactful designs, and optimized solutions that drive results.</p>
-            <div class="socials">
-                <a href="www.linkedin.com/in/rajj-dhoundyal"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/RajDhoundyal"><i class="fab fa-github"></i></a>
-                
-            </div>
-        </section>
+    <!-- Skills Section -->
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">Web Development</div>
+        <div class="skill">UI/UX Design</div>
+        <div class="skill">SEO Optimization</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+      </div>
+    </section>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>I am a professional developer specializing in web development, UI/UX design, and SEO optimization. With a strong passion for technology, I aim to deliver innovative and user-centric solutions.</p>
-        </section>
+    <!-- Projects Section -->
+    <section class="section">
+      <h2>Projects</h2>
+      <div id="projects" class="projects"></div>
+    </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="card">
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="card">
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe XD</p>
-                </div>
-                <div class="card">
-                    <h3>SEO Optimization</h3>
-                    <p>Google Analytics, SEMrush</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="experience">
-                <div class="card">
-                    <h3>OnezeroAgency</h3>
-                    <p>Role: Web Developer</p>
-                    <p>Duration: 2021 - Present</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education">
-                <div class="card">
-                    <h3>Master's in Computer Science</h3>
-                    <p>University of XYZ, 2020</p>
-                </div>
-                <div class="card">
-                    <h3>Bachelor's in Information Technology</h3>
-                    <p>College of ABC, 2018</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="card">
-                <h3>Project 1</h3>
-                <p>Brief description of the project.</p>
-            </div>
-            <div class="card">
-                <h3>Project 2</h3>
-                <p>Brief description of the project.</p>
-            </div>
-        </section>
-    </div>
+    <!-- Work Experience Section -->
+    <section class="section">
+      <h2>Work Experience</h2>
+      <div id="experience-list" class="experience-list"></div>
+    </section>
 
     <footer>
-        &copy; 2023 rajj-dhoundyal. All rights reserved.
+      <p>&copy; 2025 Rajj. <a href="#">Download CV</a></p>
     </footer>
+  </div>
+
+  <script>
+    // Dynamically generate projects
+    const projects = [
+      { title: "Project One", description: "A case study of an e-commerce website." },
+      { title: "Project Two", description: "A responsive portfolio design." },
+      { title: "Project Three", description: "SEO optimization for a local business." }
+    ];
+
+    const projectContainer = document.getElementById("projects");
+
+    projects.forEach(project => {
+      const projectCard = document.createElement("div");
+      projectCard.className = "project-card";
+      projectCard.innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      `;
+      projectContainer.appendChild(projectCard);
+    });
+
+    // Dynamically generate work experience
+    const experiences = [
+      {
+        company: "OneZero Agency",
+        role: "Developer",
+        description: "Responsible for designing, developing, and maintaining high-quality websites tailored to client needs. Collaborated with multidisciplinary teams to deliver scalable solutions with a focus on performance, user experience, and search engine optimization.",
+        duration: "Full-time (July, 2024 - Present)"
+      },
+      {
+        company: "OneZero Agency",
+        role: "Web Developer Intern",
+        description: "Collaborated with the development team to design and implement responsive user interfaces. Contributed to the improvement of web application performance and ensured cross-browser compatibility. Gained hands-on experience with modern frameworks and tools in a professional setting",
+        duration: "Internship (Dec 2023 - June 2024)"
+      },
+      {
+        company: "Internship 2",
+        role: "Frontend Developer",
+        description: "Developed and optimized server-side logic.",
+        duration: "Internship (July 2023 - September 2023)"
+      }
+    ];
+
+    const experienceList = document.getElementById("experience-list");
+
+    experiences.forEach(exp => {
+      const item = document.createElement("div");
+      item.className = "experience-item";
+      item.innerHTML = `
+        <h3>${exp.company}</h3>
+        <p><strong>Role:</strong> ${exp.role}</p>
+        <p><strong>Description:</strong> ${exp.description}</p>
+        <p><strong>Duration:</strong> ${exp.duration}</p>
+      `;
+      experienceList.appendChild(item);
+    });
+  </script>
 </body>
 </html>
